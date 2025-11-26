@@ -1,0 +1,21 @@
+# Environment variable needs to be set to the program name (e.g., export PROGRAM=millionaire)
+services:
+  alice:
+    build: .
+    networks:
+      mynet:
+        ipv4_address: 172.28.0.10
+    command: scripts/run.sh -a ${PROGRAM} ${EXTRA_ARGS}
+  bob:
+    build: .
+    networks:
+      mynet:
+        ipv4_address: 172.28.0.11
+    command: scripts/run.sh -b 172.28.0.10 ${PROGRAM} ${EXTRA_ARGS}
+
+networks:
+  mynet:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16
