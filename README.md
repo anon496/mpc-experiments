@@ -48,6 +48,4 @@ All programs assume pre-aligned inputs—each record from one party corresponds 
 Framework-specific implementations that do not fully include the functionality mentioned in this README file are marked in the `TBD` section of the README file corresponding to that framework. The `TBD` section also includes any additional work that has not been completed yet for this particular framework.
 
 ## About
-This software was developed as part of my thesis: **Privacy-Preserving Analysis of Misinformation Data**
-
 The repository and its structure were inspired by the paper *SoK: General Purpose Compilers for Secure Multi-Party Computation* and its companion [repository](https://github.com/MPC-SoK/frameworks/), which provided an excellent starting point for working with MPC frameworks.
